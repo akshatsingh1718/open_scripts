@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LK | {% block title %}{% endblock title %}</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Use this line if using the CDN approach -->
+
+    {% block css %}{% endblock css %}
+
+</head>
+<body>
+    {% block body %}{% endblock body %}
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    {% block js %}{% endblock js %}
+</body>
+</html>

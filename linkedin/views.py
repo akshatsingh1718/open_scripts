@@ -6,6 +6,13 @@ from .utils.contribuiton import contrib_response
 APP = "linkedin"
 
 
+def index(request):
+    return render(
+        request,
+        f"{APP}/index.html",
+    )
+
+
 def contribution_from_text(request):
     submitted_data = None
     if request.method == "POST":

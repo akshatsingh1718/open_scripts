@@ -1,13 +1,14 @@
+{% extends "linkedin/basic.html" %}
+
 <!-- linkedin/templates/fetcher/contribution.html -->
 {% load custom_filters %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Submit Contribution</title>
-    <script src="https://cdn.tailwindcss.com"></script> <!-- Use this line if using the CDN approach -->
-</head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+{% block title %}Contrib Text{% endblock title %}
+
+
+{% block body %}
+<div class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white shadow-md rounded-lg p-8 max-w-5xl w-full flex space-x-8">
         
         <!-- Left Section: Form -->
@@ -62,21 +63,22 @@
             {% endif %}
         </div>
     </div>
+</div>
+{% endblock body %}
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-    <script> 
+{% block js %}
+<script> 
 
-        $("#reset-form-btn").on("click", ()=>{
-            // clear form
-            $('#id_heading').val("");
-            $('#id_subheading').val("");
-            $('#id_reference_text').val("");
+    $("#reset-form-btn").on("click", ()=>{
+        // clear form
+        $('#id_heading').val("");
+        $('#id_subheading').val("");
+        $('#id_reference_text').val("");
 
-            // clear output results as well
-            $( ".response").empty();
-        });
-        
-    </script>
-</body>
-</html>
+        // clear output results as well
+        $( ".response").empty();
+    });
+    
+</script>
+{% endblock js %}

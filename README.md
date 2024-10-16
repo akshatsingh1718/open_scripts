@@ -28,10 +28,17 @@ I chose Django as the framework for this project because of its simplicity and r
     cd open_scripts
     ```
 3. **Install the required dependencies**:
+
     ```bash
     pip install -r requirements.txt
     ```
-4. **Run the development server**:
+
+4. **API credentials in .env**:
+   Copy example.env to .env file and set your api credentials in it.
+    ```bash
+    cp example.env .env
+    ```
+5. **Run the development server**:
     ```bash
     python manage.py runserver
     ```
